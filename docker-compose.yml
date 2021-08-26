@@ -7,9 +7,10 @@ services:
       - 8080:80
     environment:
       PORT: 80
-      DB_SOCKET_DIR: /var/run/mysqld/mysqld.sock
+      DB_SOCKET_DIR: /var/run/mysqld
     volumes:
       - ./secrets:/secrets
+      - dbsocket:/var/run/mysqld # mysqldソケットファイルディレクトリを共有
 
   mysql:
     image: mysql:8.0
