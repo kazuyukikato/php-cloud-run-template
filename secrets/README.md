@@ -1,1 +1,1 @@
-このフォルダにcredential.json 
+このフォルダにサービスアカウントキーを credential.json として保存してください。
