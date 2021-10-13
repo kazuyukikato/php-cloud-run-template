@@ -8,6 +8,9 @@ services:
     environment:
       PORT: 80
       DB_SOCKET_DIR: /var/run/mysqld
+      MYSQL_DATABASE: sample
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
     volumes:
       - ./secrets:/secrets
       - dbsocket:/var/run/mysqld # mysqldソケットファイルディレクトリを共有
